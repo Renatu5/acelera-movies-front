@@ -1,10 +1,10 @@
 import './style.css'
-export const Button = ({ name, onClick }) => {
+export const Button = ({ text = '', onClick }) => {
   return (
     <>
-    <div>
-      <button onClick={onClick}>{name}</button>
-    </div>
+      <div>
+        <button onClick={onClick}>{text}</button>
+      </div>
     </>
   )
 }

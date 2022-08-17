@@ -1,8 +1,9 @@
-export const Input = ({ label, type, placeholder = '', value, onChange }) => {
+import './input.css'
+export const Input = ({ name = '', label = '', type = '', placeholder = '', onChange, className }) => {
   return (
     <>
-    <label>{label}</label>
-    <input type={type} value={value} placeholder={placeholder} onChange={onChange}></input>
+      <label>{label}</label>
+      <input name={name} type={type} placeholder={placeholder} onChange={onChange} className={className}></input>
     </>
   )
 }

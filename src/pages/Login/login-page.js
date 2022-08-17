@@ -25,7 +25,7 @@ export const Login = () => {
       <div>
         <Input type="email" label="Username" placeholder="Usuário" onChange={inputUsername} />
         <Input type="password" label="Password" placeholder="Senha" onChange={inputPassword} />
-        <Button name="botao" onClick={handleClick} />
+        <Button text="botao" onClick={handleClick} />
       </div>
     </>
   )
