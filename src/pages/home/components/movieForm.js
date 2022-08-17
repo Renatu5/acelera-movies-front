@@ -28,14 +28,14 @@ export const MovieForm = () => {
 
     setValues({ ...values, [name]: value })
   }
-  const formatDate = (data) => {
-    return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
-  }
+  // const formatDate = (data) => {
+  //   return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
+  // }
   const submit = (ev) => {
     ev.preventDefault()
     const data = {
       ...values,
-      releaseDate: new Date(formatDate(values.releaseDate))
+      releaseDate: new Date(values.releaseDate)
     }
     console.log(data)
     client.post('/movie', data)
