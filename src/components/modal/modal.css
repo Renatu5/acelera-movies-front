@@ -1,7 +1,7 @@
 .modal-background{
   position:fixed;
   z-index: 1;
-  background-color: rgba(65, 55, 55, 0.642);
+  background-color: rgb(82, 77, 77);
   left: 0;
   top: 0;
   border: 1px solid black;
@@ -16,6 +16,8 @@
   background-color: white;
   border: 1px solid #CCC;
   border-radius: 3px;
+  height: 90%;
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   max-width: 500px;
@@ -46,6 +48,11 @@
   cursor: pointer;
 }
 
-.close:hover {
-  color: rgba(13, 50, 151, 0.696);
+.sendButton{
+  border: 5px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 140%;
 }

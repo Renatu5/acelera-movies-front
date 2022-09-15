@@ -1,11 +1,8 @@
 import './style.css'
-export const Button = ({ text, onClick, icon }) => {
+export const Button = ({ text, onClick, className }) => {
   return (
     <>
-      <div>
-        <button onClick={onClick}>
-          {text}</button>
-      </div>
+      <button onClick={onClick} className={className} >{text}</button>
     </>
   )
 }

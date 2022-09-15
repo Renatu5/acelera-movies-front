@@ -1,9 +1,9 @@
-
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Modal } from '../../components/modal/modal'
 import { client } from '../../service/client'
 import { MovieForm } from '../../components/forms/movieForm'
+import './style.css'
 
 export const Home = () => {
   const initialValue = {
@@ -54,18 +54,30 @@ export const Home = () => {
 
   return (
     <>
-      <div>
-        <ul>
+      <header className='header'>
+        <h1 className='header-content'>Acelera Movies</h1>
+      </header>
+      <div className='home'>
+        <nav className='navigate'>
+          <Modal titleButton='adicionar filme' title='Adicionar novo filme' buttonClass='style-button'>
+            <MovieForm onClick={submit} onChange={onChange} textButton='adicionar filme' sendClass='sendButton' />
+            {console.log(onChange)}
+          </Modal>
+        </nav>
+        <ul className='movie-list'>
+          <div className='title-page'>
+            <h2>All Movies</h2>
+          </div>
           {movies.map((movie, index) => (
-            <li key={index}>
+            <li key={index} className='movies'>
               < Link to={`/movie/${movie.id}`}>
-                {movie.title} - {movie.releaseDate} - {movie.resume}
+                <img src={movie.image} />
+                <h3 value>{movie.title}</h3>
+                <section>{movie.releaseDate} -</section>
+                {movie.resume}
               </Link>
             </li>
           ))}
-          <Modal title='Adicionar novo filme'>
-            <MovieForm onClick={submit} onChange={onChange} textButton='adicionar filme' />
-          </Modal>
         </ul>
       </div>
     </>

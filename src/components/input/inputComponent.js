@@ -1,4 +1,5 @@
-import './input.css'
+import './style.css'
+
 export const Input = ({ name = '', label = '', type = '', placeholder = '', onChange, className }) => {
   return (
     <>

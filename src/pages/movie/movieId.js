@@ -4,7 +4,6 @@ import { useNavigate, useParams } from 'react-router'
 import { Modal } from '../../components/modal/modal'
 import { client } from '../../service/client'
 import { MovieForm } from '../../components/forms/movieForm'
-import { pen } from 'fontawesome'
 import { Button } from '../../components/button/buttonComponent'
 
 export const MovieId = () => {
@@ -67,12 +66,12 @@ export const MovieId = () => {
   return (
     <>
       <div>
-        <Modal title='editar filme' buttonStyle={pen}>
+        <Modal title='editar filme' titleButton='editar filme'>
           <MovieForm textButton='atualizar filme' onClick={submit} onChange={onChange} />
         </Modal>
         <Button onClick={deleteId} text={'deletar filme'} />
         <img src={values.image} />
-        <p> {values.title} </p>
+        <p value> {values.title} </p>
       </div>
     </>
   )

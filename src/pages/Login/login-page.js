@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 import { Button } from '../../components/button/buttonComponent'
 import { Input } from '../../components/input/inputComponent'
 import { client } from '../../service/client'
-
+import './login-page.css'
 export const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -21,12 +21,14 @@ export const Login = () => {
   }
 
   return (
-    <>
-      <div>
-        <Input type="email" label="Username" placeholder="Usuário" onChange={inputUsername} />
-        <Input type="password" label="Password" placeholder="Senha" onChange={inputPassword} />
-        <Button text="botao" onClick={handleClick} />
-      </div>
-    </>
+    <div className='container'>
+      <form className='form-container'>
+        <div className='form-login'>
+          <Input type="email" label="Username" placeholder="Usuário" onChange={inputUsername} className='login' />
+          <Input type="password" label="Password" placeholder="Senha" onChange={inputPassword} className='login' />
+          <Button text="login" onClick={handleClick} className='button' />
+        </div>
+      </form>
+    </div>
   )
 }
